@@ -109,5 +109,17 @@
         android:layout_height="200dp"
         android:id="@+id/CorrectImage1"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/CorrectImage"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:id="@+id/WrongImage1"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/WrongImage"
+        android:visibility="invisible" />
+
 </RelativeLayout>
