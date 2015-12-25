@@ -1,5 +1,6 @@
 package com.example.emilyburke.redditchallenge;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -16,7 +17,12 @@ public class TitleGuess extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        // getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        // getSupportActionBar().setDisplayHomeAsUpEnabled(true); getting errors
+    }
+
+    public void GoToStartPage(View view){
+        Intent intent= new Intent(this,StartPage.class);
+        startActivity(intent);
     }
 
 }
