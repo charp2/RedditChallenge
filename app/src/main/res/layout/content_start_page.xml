@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_start_page" tools:context=".StartPage"
+    android:background="#2aa799">
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="75dp"
+        android:text="BEGIN"
+        android:id="@+id/BeginButton"
+        android:background="#8af4c839"
+        android:textSize="20dp"
+        android:onClick="GoToCategoryPage"
+        android:layout_below="@+id/textView1"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="100dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reddit Challenge"
+        android:id="@+id/textView1"
+        android:textColor="#edb419"
+        android:textStyle="bold"
+        android:textSize="60dp"
+        android:textAlignment="center"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="53dp" />
+</RelativeLayout>
