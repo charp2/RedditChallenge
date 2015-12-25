@@ -84,7 +84,8 @@
         android:id="@+id/Choice2"
         android:layout_marginTop="15dp"
         android:layout_below="@+id/Choice1"
-        android:layout_alignStart="@+id/Choice1" />
+        android:layout_alignStart="@+id/Choice1"
+        android:onClick="CorrectAnswer" />
 
     <Button
         android:layout_width="500dp"
@@ -110,7 +111,7 @@
         android:id="@+id/CorrectImage1"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/CorrectImage"
+        android:src="@drawable/correctimage"
         android:visibility="invisible" />
 
     <ImageView
@@ -119,7 +120,7 @@
         android:id="@+id/WrongImage1"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/WrongImage"
+        android:src="@drawable/wrongimage"
         android:visibility="invisible" />
 
 </RelativeLayout>

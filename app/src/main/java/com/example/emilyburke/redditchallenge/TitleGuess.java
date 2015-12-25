@@ -7,6 +7,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.ImageView;
 
 public class TitleGuess extends AppCompatActivity {
 
@@ -23,6 +24,11 @@ public class TitleGuess extends AppCompatActivity {
     public void GoToStartPage(View view){
         Intent intent= new Intent(this,StartPage.class);
         startActivity(intent);
+    }
+
+    public void CorrectAnswer (View v) {
+        ImageView iv=(ImageView) findViewById(R.id.CorrectImage1);
+                iv.setVisibility(View.VISIBLE);
     }
 
 }
