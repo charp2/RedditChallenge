@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class TitleGuess extends AppCompatActivity {
 
@@ -33,6 +34,8 @@ public class TitleGuess extends AppCompatActivity {
                    public void onTick(long millisUntilFinished) {
                        ImageView ivC=(ImageView) findViewById(R.id.CorrectImage1); //errors told me this has to be within the public void
                        ivC.setVisibility(View.VISIBLE);
+                       TextView score=(TextView) findViewById(R.id.Score1);
+                        score.setText("10"); //make add on
                    }
 
                    //below makes the "you are correct image disappear after 10 seconds
