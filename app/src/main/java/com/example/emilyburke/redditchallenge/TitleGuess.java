@@ -2,6 +2,7 @@ package com.example.emilyburke.redditchallenge;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -27,8 +28,37 @@ public class TitleGuess extends AppCompatActivity {
     }
 
     public void CorrectAnswer (View v) {
-        ImageView iv=(ImageView) findViewById(R.id.CorrectImage1);
-                iv.setVisibility(View.VISIBLE);
+               new CountDownTimer(10000,1000) {
+                   @Override
+                   public void onTick(long millisUntilFinished) {
+                       ImageView ivC=(ImageView) findViewById(R.id.CorrectImage1); //errors told me this has to be within the public void
+                       ivC.setVisibility(View.VISIBLE);
+                   }
+
+                   //below makes the "you are correct image disappear after 10 seconds
+                   @Override
+                   public void onFinish(){
+                       ImageView ivC=(ImageView) findViewById(R.id.CorrectImage1);
+                       ivC.setVisibility(View.INVISIBLE);
+                   }
+               }.start();
+    }
+
+    public void WrongAnswer (View v) {
+        new CountDownTimer(10000,1000) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+                ImageView ivW=(ImageView) findViewById(R.id.WrongImage1); //errors told me this has to be within the public void
+                ivW.setVisibility(View.VISIBLE);
+            }
+
+            //below makes the "you are correct image disappear after 10 seconds
+            @Override
+            public void onFinish(){
+                ImageView ivW=(ImageView) findViewById(R.id.WrongImage1);
+                ivW.setVisibility(View.INVISIBLE);
+            }
+        }.start();
     }
 
 }
