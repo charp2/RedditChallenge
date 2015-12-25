@@ -27,6 +27,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.emilyburke.redditchallenge.StartPage" />
         </activity>
+        <activity
+            android:name=".TitleGuess"
+            android:label="@string/title_activity_title_guess"
+            android:parentActivityName=".CategoryPage"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.emilyburke.redditchallenge.CategoryPage" />
+        </activity>
     </application>
 
 </manifest>
