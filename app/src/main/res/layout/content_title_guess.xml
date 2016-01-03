@@ -47,7 +47,6 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Insert reddit stuff here _______"
         android:id="@+id/RedditQ1"
         android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true"
@@ -55,7 +54,8 @@
         android:textColor="#000000"
         android:textSize="30dp"
         android:textAlignment="center"
-        android:textStyle="italic" />
+        android:textStyle="italic"
+        android:text="\@PostTitle" />
 
     <Button
         android:layout_width="500dp"
@@ -65,7 +65,9 @@
         android:layout_below="@+id/RedditQ1"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="17dp"
-        android:onClick="WrongAnswer" />
+        android:onClick="WrongAnswer"
+        android:gravity="top|bottom|right"
+        android:elevation="0dp" />
 
     <Button
         android:layout_width="500dp"
@@ -75,7 +77,8 @@
         android:layout_marginTop="15dp"
         android:layout_below="@+id/Choice1"
         android:layout_alignStart="@+id/Choice1"
-        android:onClick="CorrectAnswer" />
+        android:onClick="CorrectAnswer"
+        android:elevation="0dp" />
 
     <Button
         android:layout_width="500dp"
@@ -85,7 +88,8 @@
         android:layout_below="@+id/Choice2"
         android:layout_alignEnd="@+id/Choice2"
         android:layout_marginTop="15dp"
-        android:onClick="WrongAnswer" />
+        android:onClick="WrongAnswer"
+        android:elevation="0dp" />
 
     <Button
         android:layout_width="500dp"
@@ -95,7 +99,8 @@
         android:layout_below="@+id/Choice3"
         android:layout_alignEnd="@+id/Choice3"
         android:layout_marginTop="15dp"
-        android:onClick="WrongAnswer" />
+        android:onClick="WrongAnswer"
+        android:elevation="0dp" />
 
     <ImageView
         android:layout_width="300dp"
@@ -104,7 +109,8 @@
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:src="@drawable/correctimage"
-        android:visibility="invisible" />
+        android:visibility="invisible"
+        android:elevation="3dp" />
 
     <ImageView
         android:layout_width="300dp"
@@ -113,7 +119,9 @@
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:src="@drawable/wrongimage"
-        android:visibility="invisible" />
+        android:visibility="invisible"
+        android:focusableInTouchMode="false"
+        android:elevation="3dp" />
 
     <ProgressBar
         android:layout_width="match_parent"

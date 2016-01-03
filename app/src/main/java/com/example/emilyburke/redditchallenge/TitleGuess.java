@@ -11,6 +11,12 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import RedditCon.Post;
+import RedditCon.PostsHolder;
+
 public class TitleGuess extends AppCompatActivity {
 
     @Override
@@ -20,8 +26,14 @@ public class TitleGuess extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        PostsHolder p = new PostsHolder("AskReddit");       //Testing post puller with AskReddit subreddit. Getting errors.
+        list = p.fetchPosts();
+        PostTitle = list.get(0).title;
         // getSupportActionBar().setDisplayHomeAsUpEnabled(true); getting errors
     }
+
+    List<Post> list=new ArrayList<Post>();
+    String PostTitle;
 
     public void GoToStartPage(View view){
         Intent intent= new Intent(this,StartPage.class);
